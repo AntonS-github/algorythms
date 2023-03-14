@@ -1,3 +1,8 @@
+"""
+Пирамидальная сортировка (сортировка "кучей")
+"""
+
+
 def HeapSift(data, start, end):
     root = start
     while True:
@@ -23,7 +28,6 @@ def HeapSort(data):
         HeapSift(data, start, len(data) - 1)
 
     for end in range(len(data) - 1, 0, -1):
-
         data[end], data[0] = data[0], data[end]
 
         HeapSift(data, 0, end - 1)
